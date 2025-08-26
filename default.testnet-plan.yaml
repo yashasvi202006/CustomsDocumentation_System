@@ -1,0 +1,18 @@
+---
+id: 0
+name: Testnet deployment
+network: testnet
+stacks-node: "https://api.testnet.hiro.so"
+bitcoin-node: "http://blockstack:blockstacksystem@bitcoind.testnet.stacks.co:18332"
+plan:
+  batches:
+    - id: 0
+      transactions:
+        - contract-publish:
+            contract-name: CustomsDocumentationSystem
+            expected-sender: STVR4JHHR46RJ6NP4NWR6N52MHMVA79X1Y7TY46R
+            cost: 34180
+            path: "contracts\\CustomsDocumentationSystem.clar"
+            anchor-block-only: true
+            clarity-version: 3
+      epoch: "3.2"
